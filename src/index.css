@@ -1,0 +1,37 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hoem firrst animatio */
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+.hover\:stop-scroll:hover {
+  animation-play-state: paused; /* Pause the animation on hover */
+}
+
+/* Hide buttons initially */
+.product-item .product-buttons {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show buttons on hover */
+.product-item:hover .product-buttons {
+  opacity: 1;
+}
